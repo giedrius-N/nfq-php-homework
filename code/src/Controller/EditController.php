@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class EditController extends AbstractController
 {
-	#[Route('/edit/{id}', name: 'app_edit')]
+	#[Route('/edit/{id}', name: 'article_edit')]
 	public function article_edit(Article $article): Response
 	{
 	
