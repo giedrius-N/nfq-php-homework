@@ -1,0 +1,3 @@
+app_edit:
+  path: /article-edit/{id}
+  controller: App\Controller\EditController::article_edit
