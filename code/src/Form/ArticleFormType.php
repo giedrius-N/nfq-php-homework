@@ -5,6 +5,7 @@ use App\Entity\Article;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -28,6 +29,15 @@ class ArticleFormType extends AbstractType
 		'rows' => $rows,
             	'cols' => 100,
         	],
+            ])
+	    ->add('image', FileType::class, [
+                'label' => 'Article Image',
+                'mapped' => false,
+                'required' => false,
+            ])
+	    ->add('image', TextType::class, [
+                'data' => $article ? $article->getImage() : null,
+		'label' => 'Image URL'
             ]);
     }
 

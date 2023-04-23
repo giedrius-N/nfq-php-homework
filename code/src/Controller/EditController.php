@@ -32,6 +32,22 @@ class EditController extends AbstractController
 			$article->setTitle($form->get('title')->getData());
     			$article->setText($form->get('text')->getData());		
 
+			$uploadedFile = $form['image']->getData();
+			$article->setImage($uploadedFile);
+/*
+			if ($uploadedFile) {
+				$newFileName = uniqid().'.'.$uploadedFile->guessExtension();
+				try {
+				$uploadedFile->move(
+					$this->getParameter('article_images_directory'),
+					$newFileName
+					);
+				} catch (FileException $e) {
+				echo "Error";				
+				}
+				$article->setImage($newFilename);
+			}	*/
+			
 			$em->persist($article);
 			$em->flush();
 			
