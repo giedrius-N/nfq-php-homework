@@ -15,13 +15,18 @@ class ArticleFormType extends AbstractType
     {
         /** @var Article|null $article */
         $article = $options['data'] ?? null;
+	
+	$titleSize = strlen($article ? $article->getTitle() : '');	
 
 	$textLength = strlen($article ? $article->getText() : '');
         $rows = max(ceil($textLength / 150), 5); // at least 5 rows
 
         $builder
             ->add('title', TextType::class, [
-                'data' => $article ? $article->getTitle() : null
+                'data' => $article ? $article->getTitle() : null,
+		'attr' => [
+            	'size' => $titleSize,
+        	],
             ])
             ->add('text', TextareaType::class, [
                 'data' => $article ? $article->getText() : null,

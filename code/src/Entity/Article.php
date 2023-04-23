@@ -78,4 +78,24 @@ class Article
     {
         $this->image = $image;
     }
+
+    /**
+     * @return int|null
+     */
+    public function getMinutes(): ?int
+    {
+	$text_words = preg_split('/\s+/', $this->text);
+	$word_count = 0;
+	for ($i = 0; $i < sizeof($text_words); $i++){
+		if (strlen($text_words[$i]) > 3){
+    		$word_count++;
+    		}
+        }
+
+	$minutes = round($word_count / 200);
+	
+	($minutes > 0) ? $minutes : $minutes = 1;
+
+        return $minutes;
+    }
 }
