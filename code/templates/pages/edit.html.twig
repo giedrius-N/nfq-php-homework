@@ -9,6 +9,12 @@
 		</div>
 		
 		<div class="lead mb-4 py-5">{{ article.text | raw }}</div>
+
+		{{ form_start(articleForm) }}
+			{{ form_widget(articleForm) }}
+			
+			<button type="submit">Submit</button>
+		{{ form_end(articleForm) }}
 	</div>
 	</main>
 
