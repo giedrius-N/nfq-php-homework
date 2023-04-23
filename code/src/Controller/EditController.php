@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class EditController extends AbstractController
 {	
@@ -32,12 +33,37 @@ class EditController extends AbstractController
 		'article' => $article,	
         ]);
 	}*/
+		 /*
 	#[Route('/edit/{id}', name: 'article_edit')]
 	public function article_edit(EntityManagerInterface $em, Article $article):Response
 	{
 		
 		$form = $this->createForm(ArticleFormType::class);
 
+
+		return $this->render('pages/edit.html.twig', [
+			'articleForm' => $form->createView(),
+			'article' => $article,
+		]);
+	}*/	
+	#[Route('/edit/{id}', name: 'article_edit')]
+	public function article_edit(Article $article, Request $request, EntityManagerInterface $em): Response
+	{
+		$form =$this->createForm(ArticleFormType::class);
+
+		
+
+		$form->handleRequest($request);
+
+		if ($form->isSubmitted() && $form->isValid()){
+			//dd($form->getData());
+			$data = $form->getData();
+			$article->setTitle($data['title']);
+			$article->setText($data['text']);
+
+			$em->persist($article);
+			$em->flush();
+		}
 
 		return $this->render('pages/edit.html.twig', [
 			'articleForm' => $form->createView(),
