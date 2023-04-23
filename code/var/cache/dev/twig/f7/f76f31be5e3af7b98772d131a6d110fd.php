@@ -59,17 +59,14 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
         echo "\t<main>
 \t<div class=\"container\">
 \t\t<div class=\"py-5 text-center\">
-\t\t\t<h1 class=\"fw-bold\">";
+\t\t\t<h1 class=\"fw-bold\">Edit ";
         // line 7
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 7, $this->source); })()), "title", [], "any", false, false, false, 7), "html", null, true);
-        echo "</h1>
+        echo " article</h1>
 \t\t\t<p class=\"text-muted\"> X minutes </p>
 \t\t</div>
 \t\t
-\t\t<div class=\"lead mb-4 py-5\">";
-        // line 11
-        echo twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 11, $this->source); })()), "text", [], "any", false, false, false, 11);
-        echo "</div>
+\t\t<div class=\"lead mb-4 py-5\">
 
 \t\t";
         // line 13
@@ -85,6 +82,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
         // line 17
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["articleForm"]) || array_key_exists("articleForm", $context) ? $context["articleForm"] : (function () { throw new RuntimeError('Variable "articleForm" does not exist.', 17, $this->source); })()), 'form_end');
         echo "
+\t\t</div>
 \t</div>
 \t</main>
 
@@ -106,7 +104,7 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 
     public function getDebugInfo()
     {
-        return array (  86 => 17,  80 => 14,  76 => 13,  71 => 11,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  83 => 17,  77 => 14,  73 => 13,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -117,17 +115,18 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t<main>
 \t<div class=\"container\">
 \t\t<div class=\"py-5 text-center\">
-\t\t\t<h1 class=\"fw-bold\">{{ article.title }}</h1>
+\t\t\t<h1 class=\"fw-bold\">Edit {{ article.title }} article</h1>
 \t\t\t<p class=\"text-muted\"> X minutes </p>
 \t\t</div>
 \t\t
-\t\t<div class=\"lead mb-4 py-5\">{{ article.text | raw }}</div>
+\t\t<div class=\"lead mb-4 py-5\">
 
 \t\t{{ form_start(articleForm) }}
 \t\t\t{{ form_widget(articleForm) }}
 \t\t\t
 \t\t\t<button type=\"submit\">Submit</button>
 \t\t{{ form_end(articleForm) }}
+\t\t</div>
 \t</div>
 \t</main>
 

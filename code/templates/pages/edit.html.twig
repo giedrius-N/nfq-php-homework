@@ -4,17 +4,18 @@
 	<main>
 	<div class="container">
 		<div class="py-5 text-center">
-			<h1 class="fw-bold">{{ article.title }}</h1>
+			<h1 class="fw-bold">Edit {{ article.title }} article</h1>
 			<p class="text-muted"> X minutes </p>
 		</div>
 		
-		<div class="lead mb-4 py-5">{{ article.text | raw }}</div>
+		<div class="lead mb-4 py-5">
 
 		{{ form_start(articleForm) }}
 			{{ form_widget(articleForm) }}
 			
 			<button type="submit">Submit</button>
 		{{ form_end(articleForm) }}
+		</div>
 	</div>
 	</main>
 
