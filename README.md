@@ -1,3 +1,34 @@
+Completed these tasks:
+
+1. Add a new Article entry so the Listing Page has 6 Articles
+   
+   Details:
+   * Update Data Fixtures
+   * You can use [article.txt](documentation/assets/article.txt) for inspiration
+
+2. Implement "Edit" functionality for an Article.
+
+   Details:
+   * Implement a new Edit Page with a new route
+   * Implement a new Symfony Form for the Article
+   * The user should be able to change the title, text & image of an Article 
+   * Editing results are persisted in the database
+   * Add a new "Edit" button in the Listing Page
+
+3. Implement "X" minutes to read functionality. 
+   
+    Details:
+    * Implement an algorithm to find how long any given text will be read in minutes:
+      1. Count all words in a text that have more than 3 letters.
+      2. Divide it by the 200 (the average readers' words per minute)
+      3. Round up the number to get a nice value. 
+    * Change all occurrences of "X min" in the Application to the actual value. 
+
+
+
+Below is original README.md content
+
+
 # Internship Take Home Test 
 
 Our NFQ team would like to congratulate you on taking on this homework task, we're delighted to see your enthusiasm for the challenge ahead!

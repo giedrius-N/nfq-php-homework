@@ -78,11 +78,12 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
         echo "
 \t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
 \t\t\t\t<button type=\"submit\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Submit</button>
-\t\t\t</div>
+
 \t\t";
         // line 18
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["articleForm"]) || array_key_exists("articleForm", $context) ? $context["articleForm"] : (function () { throw new RuntimeError('Variable "articleForm" does not exist.', 18, $this->source); })()), 'form_end');
         echo "
+\t\t\t</div>
 \t\t</div>
 \t</div>
 \t</main>
@@ -126,8 +127,9 @@ class __TwigTemplate_55284c7ccf541db2503409beda63125e extends Template
 \t\t\t{{ form_widget(articleForm) }}
 \t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
 \t\t\t\t<button type=\"submit\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Submit</button>
-\t\t\t</div>
+
 \t\t{{ form_end(articleForm) }}
+\t\t\t</div>
 \t\t</div>
 \t</div>
 \t</main>
