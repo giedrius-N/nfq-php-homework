@@ -90,6 +90,8 @@ return [[
 '[C]App%5CEntity%5CArticle%23getImage' => 1,
 'App%5CEntity%5CArticle%23setImage' => 0,
 '[C]App%5CEntity%5CArticle%23setImage' => 1,
+'App%5CEntity%5CArticle%23getMinutes' => 0,
+'[C]App%5CEntity%5CArticle%23getMinutes' => 1,
 'App%5CEntity%5CArticle%24id' => 0,
 '[C]App%5CEntity%5CArticle%24id' => 1,
 'App%5CEntity%5CArticle%24title' => 0,
@@ -564,6 +566,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1682276206,
+1 => 1682369575,
 
 ]];

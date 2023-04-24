@@ -76,12 +76,14 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
         // line 14
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["articleForm"]) || array_key_exists("articleForm", $context) ? $context["articleForm"] : (function () { throw new RuntimeError('Variable "articleForm" does not exist.', 14, $this->source); })()), 'widget');
         echo "
-\t\t\t
-\t\t\t<button type=\"submit\">Submit</button>
+\t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
+\t\t\t\t<button type=\"submit\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Submit</button>
+
 \t\t";
-        // line 17
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["articleForm"]) || array_key_exists("articleForm", $context) ? $context["articleForm"] : (function () { throw new RuntimeError('Variable "articleForm" does not exist.', 17, $this->source); })()), 'form_end');
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["articleForm"]) || array_key_exists("articleForm", $context) ? $context["articleForm"] : (function () { throw new RuntimeError('Variable "articleForm" does not exist.', 18, $this->source); })()), 'form_end');
         echo "
+\t\t\t</div>
 \t\t</div>
 \t</div>
 \t</main>
@@ -104,7 +106,7 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  83 => 17,  77 => 14,  73 => 13,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  84 => 18,  77 => 14,  73 => 13,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -123,9 +125,11 @@ class __TwigTemplate_d8550ea28b8a28b6a4dd248cd19ae7e9 extends Template
 
 \t\t{{ form_start(articleForm) }}
 \t\t\t{{ form_widget(articleForm) }}
-\t\t\t
-\t\t\t<button type=\"submit\">Submit</button>
+\t\t\t<div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
+\t\t\t\t<button type=\"submit\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Submit</button>
+
 \t\t{{ form_end(articleForm) }}
+\t\t\t</div>
 \t\t</div>
 \t</div>
 \t</main>

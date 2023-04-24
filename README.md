@@ -22,7 +22,10 @@ Completed these tasks:
       1. Count all words in a text that have more than 3 letters.
       2. Divide it by the 200 (the average readers' words per minute)
       3. Round up the number to get a nice value. 
-    * Change all occurrences of "X min" in the Application to the actual value. 
+    * Change all occurrences of "X min" in the Application to the actual value.
+
+    Optional Requirements:
+    * Write a Unit Test for the Algorithm
 
 
 

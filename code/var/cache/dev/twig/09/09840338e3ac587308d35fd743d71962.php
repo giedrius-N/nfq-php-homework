@@ -64,7 +64,10 @@ class __TwigTemplate_c52d630aefae623c2773adce73c00fb2 extends Template
         // line 8
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 8, $this->source); })()), "title", [], "any", false, false, false, 8), "html", null, true);
         echo "</h1>
-                    <p class=\"text-muted\">X minutes</p>
+                    <p class=\"text-muted\">";
+        // line 9
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 9, $this->source); })()), "getMinutes", [], "method", false, false, false, 9), "html", null, true);
+        echo " minutes</p>
                 </div>
 
                 <img class=\"img-fluid\" src=\"";
@@ -82,6 +85,10 @@ class __TwigTemplate_c52d630aefae623c2773adce73c00fb2 extends Template
         // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
+\t\t    <a href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 18, $this->source); })()), "id", [], "any", false, false, false, 18)]), "html", null, true);
+        echo "\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Edit</a>
                 </div>
             </div>
         </div>
@@ -104,7 +111,7 @@ class __TwigTemplate_c52d630aefae623c2773adce73c00fb2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  83 => 17,  77 => 14,  72 => 12,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  90 => 18,  86 => 17,  80 => 14,  75 => 12,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -117,7 +124,7 @@ class __TwigTemplate_c52d630aefae623c2773adce73c00fb2 extends Template
             <div class=\"container\">
                 <div class=\"py-5 text-center\">
                     <h1 class=\"fw-bold\">{{ article.title }}</h1>
-                    <p class=\"text-muted\">X minutes</p>
+                    <p class=\"text-muted\">{{ article.getMinutes() }} minutes</p>
                 </div>
 
                 <img class=\"img-fluid\" src=\"{{ article.image }}\" alt=\"\">
@@ -126,6 +133,7 @@ class __TwigTemplate_c52d630aefae623c2773adce73c00fb2 extends Template
 
                 <div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
                     <a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
+\t\t    <a href=\"{{ path('article_edit', {id: article.id}) }}\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Edit</a>
                 </div>
             </div>
         </div>
