@@ -1,4 +1,4 @@
-Completed these tasks:
+Completed tasks:
 
 1. Add a new Article entry so the Listing Page has 6 Articles
    
